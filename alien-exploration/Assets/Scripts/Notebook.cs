@@ -1,0 +1,77 @@
+using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+
+public class Notebook : MonoBehaviour
+{
+
+    public GameObject noteCanvas;
+    public TMP_InputField noteInput;
+    public Button closeButton;
+
+    private bool noteOpen = false;
+    private string savedNoteText = "";
+
+
+    public GameObject playerController;
+    private MonoBehaviour[] playerScripts;
+
+    void Start()
+    {
+
+        noteCanvas.SetActive(false);
+        closeButton.onClick.AddListener(CloseNote);
+        playerScripts = playerController.GetComponents<MonoBehaviour>();
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.N)) // to toggle note on, 
+        {
+            if (!noteOpen)
+                OpenNote();
+
+        }
+    }
+
+    void OpenNote()
+    {
+        noteCanvas.SetActive(true);
+        noteOpen = true;
+
+        //cursor on when opened note since goldplayercontroller turns it off
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
+        //additional scripts turned off in case pam or vega wanna put in ******
+        foreach (var script in playerScripts)
+        {
+            script.enabled = false;
+        }
+
+
+        noteInput.text = savedNoteText;
+
+
+        noteInput.ActivateInputField();
+    }
+
+    void CloseNote()
+    {
+        noteCanvas.SetActive(false);
+        noteOpen = false;
+
+        //Save the note text
+        savedNoteText = noteInput.text;
+
+        //Restore cursor state to off goldplayercontroller
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+
+        //Re-enable player scripts **** We can take this off but i wasnt sure
+        foreach (var script in playerScripts)
+        {
+            script.enabled = true;
+        }
+    }
+}
