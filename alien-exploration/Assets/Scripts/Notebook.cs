@@ -9,16 +9,15 @@ public class Notebook : MonoBehaviour
     public TMP_InputField noteInput;
     public Button closeButton;
 
-    private bool noteOpen = false;
+    public bool noteOpen = false;
+    //private bool canCloseTablet = true;
     private string savedNoteText = "";
-
-
     public GameObject playerController;
     private MonoBehaviour[] playerScripts;
+    public CamController cc;
 
     void Start()
     {
-
         noteCanvas.SetActive(false);
         closeButton.onClick.AddListener(CloseNote);
         playerScripts = playerController.GetComponents<MonoBehaviour>();
@@ -39,6 +38,9 @@ public class Notebook : MonoBehaviour
         noteCanvas.SetActive(true);
         noteOpen = true;
 
+        cc.imageCanvas.SetActive(false);
+        cc.textBox.SetActive(true);
+
         //cursor on when opened note since goldplayercontroller turns it off
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
@@ -51,8 +53,6 @@ public class Notebook : MonoBehaviour
 
 
         noteInput.text = savedNoteText;
-
-
         noteInput.ActivateInputField();
     }
 
