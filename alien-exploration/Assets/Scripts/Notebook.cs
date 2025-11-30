@@ -15,6 +15,7 @@ public class Notebook : MonoBehaviour
     public GameObject playerController;
     private MonoBehaviour[] playerScripts;
     public CamController cc;
+    public GameObject frameButton;
 
     void Start()
     {
@@ -29,12 +30,13 @@ public class Notebook : MonoBehaviour
         {
             if (!noteOpen)
                 OpenNote();
-
         }
     }
 
     void OpenNote()
     {
+        frameButton.SetActive(false);
+
         noteCanvas.SetActive(true);
         noteOpen = true;
 
@@ -58,6 +60,7 @@ public class Notebook : MonoBehaviour
 
     void CloseNote()
     {
+        frameButton.SetActive(true);
         noteCanvas.SetActive(false);
         noteOpen = false;
 
