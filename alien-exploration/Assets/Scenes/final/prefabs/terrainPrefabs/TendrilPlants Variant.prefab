@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &4453934803405797749
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 358465392007808716, guid: 5c9c0426724d14c7684689d577b887d7, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: fd9a0aa0c3fc24a24a6cfb0ef7fb7c2a, type: 2}
+    - target: {fileID: 669944538327902214, guid: 5c9c0426724d14c7684689d577b887d7, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 13f3b14003793418b9db889eb4b5c072, type: 2}
+    - target: {fileID: 1600360036117132783, guid: 5c9c0426724d14c7684689d577b887d7, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 13f3b14003793418b9db889eb4b5c072, type: 2}
+    - target: {fileID: 3492145669838115689, guid: 5c9c0426724d14c7684689d577b887d7, type: 3}
+      propertyPath: m_Name
+      value: TendrilPlants Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4457808077606479606, guid: 5c9c0426724d14c7684689d577b887d7, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: fd9a0aa0c3fc24a24a6cfb0ef7fb7c2a, type: 2}
+    - target: {fileID: 6548070536413404960, guid: 5c9c0426724d14c7684689d577b887d7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 259.9537
+      objectReference: {fileID: 0}
+    - target: {fileID: 6548070536413404960, guid: 5c9c0426724d14c7684689d577b887d7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.1046557
+      objectReference: {fileID: 0}
+    - target: {fileID: 6548070536413404960, guid: 5c9c0426724d14c7684689d577b887d7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 51.015106
+      objectReference: {fileID: 0}
+    - target: {fileID: 6548070536413404960, guid: 5c9c0426724d14c7684689d577b887d7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6548070536413404960, guid: 5c9c0426724d14c7684689d577b887d7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6548070536413404960, guid: 5c9c0426724d14c7684689d577b887d7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6548070536413404960, guid: 5c9c0426724d14c7684689d577b887d7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6548070536413404960, guid: 5c9c0426724d14c7684689d577b887d7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6548070536413404960, guid: 5c9c0426724d14c7684689d577b887d7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6548070536413404960, guid: 5c9c0426724d14c7684689d577b887d7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6845298742085798768, guid: 5c9c0426724d14c7684689d577b887d7, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 13f3b14003793418b9db889eb4b5c072, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5c9c0426724d14c7684689d577b887d7, type: 3}
