@@ -12,7 +12,7 @@ public class CubeMovement : ObjectMovement
 
     void Start()
     {
-        canRoll = true;
+        canRoll = false;
     }
     void Update()
     {
