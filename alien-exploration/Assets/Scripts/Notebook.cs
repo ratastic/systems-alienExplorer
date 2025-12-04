@@ -64,8 +64,8 @@ public class Notebook : MonoBehaviour
 
     void CloseNote()
     {
-        StartCoroutine(ClosingNoteAnim());
-        //nbAnim.SetBool("slideOut", true);
+        nbAnim.SetBool("slideOut", true);
+        nbAnim.SetBool("slideIn", false);
         frameButton.SetActive(true);
         //noteCanvas.SetActive(false);
         noteOpen = false;
@@ -81,16 +81,6 @@ public class Notebook : MonoBehaviour
         foreach (var script in playerScripts)
         {
             script.enabled = true;
-        }
-    }
-
-    private IEnumerator ClosingNoteAnim()
-    {
-        while (true)
-        {
-            nbAnim.SetBool("slideOut", true);
-            nbAnim.SetBool("isIdle", true);
-            nbAnim.SetBool("slideIn", false);
         }
     }
 }

@@ -15,6 +15,7 @@ public class CamController : MonoBehaviour
     public List<GameObject> capturedImages = new List<GameObject>(); // to store new images within a 3x2 grid
     private bool canTakePic;
     public GameObject textBox;
+    private AudioSource camShutter;
 
     void OnGUI()
     {
@@ -25,6 +26,7 @@ public class CamController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        camShutter = GetComponent<AudioSource>();
         canTakePic = false;
         imageCanvas.SetActive(false);
         camFrame.SetActive(!camFrame.activeSelf);
@@ -54,6 +56,7 @@ public class CamController : MonoBehaviour
     public void CaptureImage()
     {
         Debug.Log("cam button pressed");
+        camShutter.Play();
         // gives new images the same dimensions and color as the render texture
         Texture2D capturedTexture = new Texture2D(renderTexture.width, renderTexture.height, TextureFormat.RGB24, false);
         // current render texture is set to the image taken
