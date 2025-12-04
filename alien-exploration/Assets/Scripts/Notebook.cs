@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Collections;
+using System.Collections.Generic;
 
 public class Notebook : MonoBehaviour
 {
@@ -16,10 +18,11 @@ public class Notebook : MonoBehaviour
     private MonoBehaviour[] playerScripts;
     public CamController cc;
     public GameObject frameButton;
+    public Animator nbAnim;
 
     void Start()
     {
-        noteCanvas.SetActive(false);
+        //noteCanvas.SetActive(false);
         closeButton.onClick.AddListener(CloseNote);
         playerScripts = playerController.GetComponents<MonoBehaviour>();
     }
@@ -35,9 +38,10 @@ public class Notebook : MonoBehaviour
 
     void OpenNote()
     {
+        nbAnim.SetBool("slideIn", true);
         frameButton.SetActive(false);
 
-        noteCanvas.SetActive(true);
+        //noteCanvas.SetActive(true);
         noteOpen = true;
 
         cc.imageCanvas.SetActive(false);
@@ -60,8 +64,10 @@ public class Notebook : MonoBehaviour
 
     void CloseNote()
     {
+        StartCoroutine(ClosingNoteAnim());
+        //nbAnim.SetBool("slideOut", true);
         frameButton.SetActive(true);
-        noteCanvas.SetActive(false);
+        //noteCanvas.SetActive(false);
         noteOpen = false;
 
         //Save the note text
@@ -75,6 +81,16 @@ public class Notebook : MonoBehaviour
         foreach (var script in playerScripts)
         {
             script.enabled = true;
+        }
+    }
+
+    private IEnumerator ClosingNoteAnim()
+    {
+        while (true)
+        {
+            nbAnim.SetBool("slideOut", true);
+            nbAnim.SetBool("isIdle", true);
+            nbAnim.SetBool("slideIn", false);
         }
     }
 }
