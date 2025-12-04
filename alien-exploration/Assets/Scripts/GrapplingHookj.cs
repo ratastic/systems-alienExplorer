@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class GrapplingHookj : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class GrapplingHookj : MonoBehaviour
     private bool isShooting, isGrappling;
     private Vector3 hookPoint;
 
+    [SerializeField] private AudioClip grapplingLaunch;
+    private AudioSource audioSource;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -23,6 +26,8 @@ public class GrapplingHookj : MonoBehaviour
         
         isShooting = false;
         isGrappling = false;
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -30,8 +35,11 @@ public class GrapplingHookj : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(1))
         {
+            
             Debug.Log("grappling");
             ShootHook();
+            audioSource.clip = grapplingLaunch;
+            audioSource.Play();
         }
         if (isGrappling)
         {
