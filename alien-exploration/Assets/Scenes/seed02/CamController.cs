@@ -16,6 +16,9 @@ public class CamController : MonoBehaviour
     private bool canTakePic;
     public GameObject textBox;
 
+    [SerializeField] private AudioClip cameraSound;
+    private AudioSource audioSource;
+
     void OnGUI()
     {
         Cursor.lockState = CursorLockMode.None;
@@ -25,6 +28,7 @@ public class CamController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         canTakePic = false;
         imageCanvas.SetActive(false);
         camFrame.SetActive(!camFrame.activeSelf);
@@ -54,6 +58,8 @@ public class CamController : MonoBehaviour
     public void CaptureImage()
     {
         Debug.Log("cam button pressed");
+        audioSource.clip = cameraSound;
+        audioSource.Play();
         // gives new images the same dimensions and color as the render texture
         Texture2D capturedTexture = new Texture2D(renderTexture.width, renderTexture.height, TextureFormat.RGB24, false);
         // current render texture is set to the image taken
