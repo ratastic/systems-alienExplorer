@@ -13,7 +13,7 @@ public class Notebook : MonoBehaviour
 
     public bool noteOpen = false;
     //private bool canCloseTablet = true;
-    private string savedNoteText = "";
+    //private string savedNoteText = "";
     public GameObject playerController;
     private MonoBehaviour[] playerScripts;
     public CamController cc;
@@ -57,8 +57,8 @@ public class Notebook : MonoBehaviour
             script.enabled = false;
         }
 
-
-        noteInput.text = savedNoteText;
+        noteInput.text = NotebookManager.Instance.savedNoteText;
+        //noteInput.text = savedNoteText;
         noteInput.ActivateInputField();
     }
 
@@ -71,7 +71,8 @@ public class Notebook : MonoBehaviour
         noteOpen = false;
 
         //Save the note text
-        savedNoteText = noteInput.text;
+        // savedNoteText = noteInput.text;
+        NotebookManager.Instance.savedNoteText = noteInput.text;
 
         //Restore cursor state to off goldplayercontroller
         Cursor.lockState = CursorLockMode.Locked;
