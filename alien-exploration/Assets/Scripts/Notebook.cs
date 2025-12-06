@@ -9,7 +9,7 @@ public class Notebook : MonoBehaviour
 
     public GameObject noteCanvas;
     public TMP_InputField noteInput;
-    public Button closeButton;
+    //public Button closeButton;
 
     public bool noteOpen = false;
     //private bool canCloseTablet = true;
@@ -17,29 +17,33 @@ public class Notebook : MonoBehaviour
     public GameObject playerController;
     private MonoBehaviour[] playerScripts;
     public CamController cc;
-    public GameObject frameButton;
+    //public GameObject frameButton;
     public Animator nbAnim;
 
     void Start()
     {
         //noteCanvas.SetActive(false);
-        closeButton.onClick.AddListener(CloseNote);
+        //closeButton.onClick.AddListener(CloseNote);
         playerScripts = playerController.GetComponents<MonoBehaviour>();
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.N)) // to toggle note on, 
+        if (Input.GetKeyDown(KeyCode.Tab)) // to toggle note on, 
         {
             if (!noteOpen)
                 OpenNote();
+
+            if (noteOpen)
+                CloseNote();
         }
+
     }
 
     void OpenNote()
     {
         nbAnim.SetBool("slideIn", true);
-        frameButton.SetActive(false);
+       // frameButton.SetActive(false);
 
         //noteCanvas.SetActive(true);
         noteOpen = true;
@@ -48,8 +52,8 @@ public class Notebook : MonoBehaviour
         cc.textBox.SetActive(true);
 
         //cursor on when opened note since goldplayercontroller turns it off
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
+        //Cursor.lockState = CursorLockMode.None;
+        //Cursor.visible = true;
 
         //additional scripts turned off in case pam or vega wanna put in ******
         foreach (var script in playerScripts)
@@ -66,7 +70,7 @@ public class Notebook : MonoBehaviour
     {
         nbAnim.SetBool("slideOut", true);
         nbAnim.SetBool("slideIn", false);
-        frameButton.SetActive(true);
+        //frameButton.SetActive(true);
         //noteCanvas.SetActive(false);
         noteOpen = false;
 
@@ -75,8 +79,8 @@ public class Notebook : MonoBehaviour
         NotebookManager.Instance.savedNoteText = noteInput.text;
 
         //Restore cursor state to off goldplayercontroller
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        //Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.visible = false;
 
         //Re-enable player scripts **** We can take this off but i wasnt sure
         foreach (var script in playerScripts)

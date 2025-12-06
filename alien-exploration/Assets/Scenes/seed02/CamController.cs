@@ -11,7 +11,7 @@ public class CamController : MonoBehaviour
     public GameObject gridContainer; // display images in a grid
     public GameObject imagePrefab; // to instantiate new images
     public GameObject imageCanvas; // canvas that plasters the images on screen
-    public GameObject camFrame;
+    //public GameObject camFrame;
     public List<GameObject> capturedImages = new List<GameObject>(); // to store new images within a 3x2 grid
     private bool canTakePic;
     public GameObject textBox;
@@ -29,7 +29,7 @@ public class CamController : MonoBehaviour
         camShutter = GetComponent<AudioSource>();
         canTakePic = false;
         imageCanvas.SetActive(false);
-        camFrame.SetActive(!camFrame.activeSelf);
+        //camFrame.SetActive(!camFrame.activeSelf);
 
         if (cameraToCapture != null) // if in use
         {
@@ -41,16 +41,20 @@ public class CamController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (imageCanvas.activeSelf == true)
+        if (Input.GetKeyDown(KeyCode.C))
         {
-            canTakePic = false;
-            camFrame.SetActive(false);
+            CaptureImage(); //this make it so when u press the c key U TAKE DA PHOTO!!!!!!!
         }
+        //if (imageCanvas.activeSelf == true)
+        //{
+        //    canTakePic = false;
+        //    camFrame.SetActive(false);
+        //}
 
-        if (canTakePic == true && Input.GetKeyDown(KeyCode.C))
-        {
-            CaptureImage(); // camera takes pic when c is pressed
-        }
+        //if (canTakePic == true && Input.GetKeyDown(KeyCode.C))
+        //{
+        //    CaptureImage(); // camera takes pic when c is pressed
+        //}
     }
 
     public void CaptureImage()
@@ -80,12 +84,12 @@ public class CamController : MonoBehaviour
     {
         Debug.Log("can take picture");
         canTakePic = !canTakePic;
-        camFrame.SetActive(!camFrame.activeSelf);
+        //camFrame.SetActive(!camFrame.activeSelf);
     }
 
-    public void OpenDisplay()
-    {
-        imageCanvas.SetActive(!imageCanvas.activeSelf);
-        textBox.SetActive(!textBox.activeSelf);
-    }
+    //public void OpenDisplay()
+    //{
+    //    imageCanvas.SetActive(!imageCanvas.activeSelf);
+    //    textBox.SetActive(!textBox.activeSelf);
+    //}
 }
