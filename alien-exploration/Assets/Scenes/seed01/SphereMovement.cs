@@ -10,7 +10,7 @@ public class SphereMovement : ObjectMovement
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        canRoll = true;
+        // canRoll = true;
     }
 
     void Update()

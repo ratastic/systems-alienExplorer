@@ -33,15 +33,16 @@ public class Notebook : MonoBehaviour
         {
             if (!noteOpen)
                 OpenNote();
-
-            if (noteOpen)
+            else {
                 CloseNote();
+            }
         }
 
     }
 
     void OpenNote()
     {
+        Debug.Log("tab is pressed");
         nbAnim.SetBool("slideIn", true);
        // frameButton.SetActive(false);
 
@@ -60,7 +61,7 @@ public class Notebook : MonoBehaviour
         {
             script.enabled = false;
         }
-
+        
         noteInput.text = NotebookManager.Instance.savedNoteText;
         //noteInput.text = savedNoteText;
         noteInput.ActivateInputField();
