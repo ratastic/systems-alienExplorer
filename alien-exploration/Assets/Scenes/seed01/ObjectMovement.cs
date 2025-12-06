@@ -23,7 +23,6 @@ public class ObjectMovement : MonoBehaviour
 
             updated = true;
         }
-        //Debug.Log($"{other.name}");
     }
 
     void LateUpdate()
