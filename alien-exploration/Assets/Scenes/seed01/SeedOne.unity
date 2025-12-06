@@ -758,6 +758,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 799582000}
+  distance: 8
+  mouseSensitivity: 5
+  minYAngle: 0
+  maxYAngle: 30
+  viewOffset: 2
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
