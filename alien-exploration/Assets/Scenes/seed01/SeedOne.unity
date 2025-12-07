@@ -1253,6 +1253,7 @@ MonoBehaviour:
   cf: {fileID: 330585548}
   canRoll: 1
   speed: 3
+  camTF: {fileID: 330585546}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1811,6 +1812,7 @@ MonoBehaviour:
   cf: {fileID: 330585548}
   canRoll: 0
   rollSpeed: 1000
+  camTF: {fileID: 330585546}
 --- !u!65 &1996581837
 BoxCollider:
   m_ObjectHideFlags: 0

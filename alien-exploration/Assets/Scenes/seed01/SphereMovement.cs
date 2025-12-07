@@ -6,6 +6,7 @@ public class SphereMovement : ObjectMovement
 {
     public float speed = 5f;
     private Rigidbody rb;
+    public Transform camTF;
     //public bool ballRolling;
     void Start()
     {
@@ -26,20 +27,20 @@ public class SphereMovement : ObjectMovement
     {
         if (Input.GetAxis("Horizontal") > 0)
         {
-            rb.AddForce(Vector3.right * speed);
+            rb.AddForce(camTF.right * speed);
         }
         else if (Input.GetAxis("Horizontal") < 0)
         {
-            rb.AddForce(-Vector3.right * speed);
+            rb.AddForce(-camTF.right * speed);
         }
 
         if (Input.GetAxis("Vertical") > 0)
         {
-            rb.AddForce(Vector3.forward * speed);
+            rb.AddForce(camTF.forward * speed);
         }
         else if (Input.GetAxis("Vertical") < 0)
         {
-            rb.AddForce(-Vector3.forward * speed);
+            rb.AddForce(-camTF.forward * speed);
         }
     }
 }

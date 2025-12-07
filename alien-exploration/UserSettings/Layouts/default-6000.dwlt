@@ -341,7 +341,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 103
+    y: 24
     width: 327
     height: 526.5
   m_SerializedDataModeController:
@@ -406,8 +406,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Scene\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 328
-    y: 103
+    x: 329
+    y: 24
     width: 640.5
     height: 526.5
   m_SerializedDataModeController:
@@ -1028,11 +1028,11 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: 0.22907554, y: 0.24076599, z: -0.05904753, w: 0.941387}
     speed: 2
-    m_Value: {x: 0.2290595, y: 0.24074914, z: -0.0590434, w: 0.94132113}
+    m_Value: {x: -0.22907554, y: -0.24076599, z: 0.05904753, w: -0.941387}
   m_Size:
     m_Target: 4.808094
     speed: 2
-    m_Value: 4.8080955
+    m_Value: 4.808094
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1159,8 +1159,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Game\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 970.5
-    y: 103
+    x: 971.5
+    y: 24
     width: 166
     height: 526.5
   m_SerializedDataModeController:
@@ -1296,8 +1296,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Inspector\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 1138.5
-    y: 103
+    x: 1139.5
+    y: 24
     width: 372.5
     height: 526.5
   m_SerializedDataModeController:
@@ -1346,7 +1346,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 655.5
+    y: 576.5
     width: 1512
     height: 280.5
   m_SerializedDataModeController:

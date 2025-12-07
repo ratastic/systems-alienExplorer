@@ -6,9 +6,7 @@ public class CubeMovement : ObjectMovement
 {
     [SerializeField] private float rollSpeed = 3f;
     private bool isMoving;
-    //private bool cubeCanRoll;
-    //public CylinderMovement cm;
-    //public CameraFollow cf;
+    public Transform camTF;
 
     void Start()
     {
@@ -19,10 +17,10 @@ public class CubeMovement : ObjectMovement
         //Debug.Log(canRoll);
         if (isMoving) return;
 
-        if (Input.GetKey(KeyCode.W)) Assemble(Vector3.forward);
-        if (Input.GetKey(KeyCode.A)) Assemble(Vector3.left);
-        if (Input.GetKey(KeyCode.S)) Assemble(Vector3.back);
-        if (Input.GetKey(KeyCode.D)) Assemble(Vector3.right);
+        if (Input.GetKey(KeyCode.W)) Assemble(camTF.forward);
+        if (Input.GetKey(KeyCode.A)) Assemble(-camTF.right);
+        if (Input.GetKey(KeyCode.S)) Assemble(-camTF.forward);
+        if (Input.GetKey(KeyCode.D)) Assemble(camTF.right);
         
         void Assemble(Vector3 dir)
         {
