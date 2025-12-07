@@ -17,11 +17,11 @@ public class CamController : MonoBehaviour
     public GameObject textBox;
     private AudioSource camShutter;
 
-    void OnGUI()
-    {
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
-    }
+    // void OnGUI()
+    // {
+    //     Cursor.lockState = CursorLockMode.None;
+    //     Cursor.visible = true;
+    // }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

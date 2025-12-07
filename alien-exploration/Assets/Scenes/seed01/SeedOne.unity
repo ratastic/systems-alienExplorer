@@ -1303,11 +1303,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &849173942 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 987484536478670032, guid: caaa18673fa254da6863b8ed2f83b270, type: 3}
-  m_PrefabInstance: {fileID: 1326162670}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1326162670
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1423,9 +1418,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 623968155}
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 987484536478670032, guid: caaa18673fa254da6863b8ed2f83b270, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1326162676}
     - targetCorrespondingSourceObject: {fileID: 943446553166965082, guid: caaa18673fa254da6863b8ed2f83b270, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2139506871}
@@ -1451,19 +1443,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 98585065470477439, guid: caaa18673fa254da6863b8ed2f83b270, type: 3}
   m_PrefabInstance: {fileID: 1326162670}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1326162676
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 849173942}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec9599bcefc40449281b42d5e71cc656, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NotebookManager
-  savedNoteText: 
 --- !u!1 &1454441754
 GameObject:
   m_ObjectHideFlags: 0
@@ -3485,7 +3464,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.00036621094, y: -0.00024414062}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1237.5, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &6118532769388634151
