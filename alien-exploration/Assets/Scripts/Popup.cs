@@ -63,7 +63,7 @@ public class Popup : MonoBehaviour
         
         popUp.SetActive(true);
         Debug.Log("popup on");
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(3.5f);
         popUp.SetActive(false);
         
     }
