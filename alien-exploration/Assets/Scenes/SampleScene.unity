@@ -1426,6 +1426,7 @@ MonoBehaviour:
   cf: {fileID: 1250949620}
   canRoll: 0
   rollSpeed: 3
+  camTF: {fileID: 0}
 --- !u!65 &1213908001
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1678,6 +1679,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraFollow
   target: {fileID: 1213908004}
+  distance: 5
+  mouseSensitivity: 5
+  minYAngle: 10
+  maxYAngle: 60
+  viewOffset: 5
 --- !u!1 &1288709924
 GameObject:
   m_ObjectHideFlags: 0
@@ -2513,6 +2519,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 8907358545162117868}
+    - target: {fileID: 1004577758649107605, guid: 1b6abf58673054c63bce72b57d6c5fd8, type: 3}
+      propertyPath: m_Value
+      value: -0.001
+      objectReference: {fileID: 0}
+    - target: {fileID: 2130736107401163006, guid: 1b6abf58673054c63bce72b57d6c5fd8, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0
+      objectReference: {fileID: 0}
     - target: {fileID: 3583170956032848817, guid: 1b6abf58673054c63bce72b57d6c5fd8, type: 3}
       propertyPath: m_Name
       value: CANVAS_notebook
@@ -2604,6 +2618,14 @@ PrefabInstance:
     - target: {fileID: 5377633911615688154, guid: 1b6abf58673054c63bce72b57d6c5fd8, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5377633911615688154, guid: 1b6abf58673054c63bce72b57d6c5fd8, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6096586306189261404, guid: 1b6abf58673054c63bce72b57d6c5fd8, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.00024414062
       objectReference: {fileID: 0}
     - target: {fileID: 7759608296558051630, guid: 1b6abf58673054c63bce72b57d6c5fd8, type: 3}
       propertyPath: m_AnchorMax.x
