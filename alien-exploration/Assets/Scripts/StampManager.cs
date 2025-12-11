@@ -1,12 +1,18 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class StampManager : MonoBehaviour
 {
-    public Animator rejectAnim;
-    public Animator approveAnim;
+    public GameObject reject;
+    public GameObject approve;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private void Awake()
+    {
+        
+    }
+   
     void Start()
     {
         
@@ -18,13 +24,13 @@ public class StampManager : MonoBehaviour
         if (ImageRegistry.Instance.savedImages.Count >= 30)
         {
             Debug.Log("enough");
-            approveAnim.SetBool("isApproved", true);
+            approve.SetActive(true);
         }
 
         if (ImageRegistry.Instance.savedImages.Count <= 30)
         {
             Debug.Log("not enough");
-            rejectAnim.SetBool("isRejected", true);
+            reject.SetActive(true);
         }
     }
 }
