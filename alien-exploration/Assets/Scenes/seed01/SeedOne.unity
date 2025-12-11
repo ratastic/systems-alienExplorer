@@ -748,7 +748,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 256
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -2393,9 +2393,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Popup
   popUp: {fileID: 192459230}
   statements:
-  - {fileID: 8300000, guid: acd9c855b12824afd9d3b9a28ff61057, type: 3}
-  - {fileID: 8300000, guid: 33eefd9a7e94b4b8981dff8ac388bd69, type: 3}
-  - {fileID: 8300000, guid: 741afe489cb8147c4a8e9606ce824161, type: 3}
+  - {fileID: 8300000, guid: 619cbea407b184bf6a8d5f2d8eda43e6, type: 3}
+  - {fileID: 8300000, guid: ce3ba057e03224ea8b015be6977c8899, type: 3}
+  - {fileID: 8300000, guid: f6135d7aa520b467caca76e03fbc151e, type: 3}
+  - {fileID: 8300000, guid: adaede4adaf7d42468810b579ddebaf8, type: 3}
+  - {fileID: 8300000, guid: 981c553ca18ab45a69fad397aa3af316, type: 3}
+  - {fileID: 8300000, guid: 2666dd862abfb40e1bb35be84f8d68e3, type: 3}
+  - {fileID: 8300000, guid: 53f19ef81e41d4c3081c17e8dc9f8142, type: 3}
 --- !u!4 &1038379630
 Transform:
   m_ObjectHideFlags: 0
