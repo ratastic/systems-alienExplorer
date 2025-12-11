@@ -28,4 +28,9 @@ public class SceneChange : MonoBehaviour
     {
         SceneManager.LoadScene("SeedOne");
     }
+
+    public void PlayAgain()
+    {
+        SceneManager.LoadScene("TitlePage");
+    }
 }
