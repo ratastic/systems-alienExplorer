@@ -34,6 +34,25 @@ public class NotebookManager : MonoBehaviour
         {
             noteInput.readOnly = false;
         }
+
+        if (SceneManager.GetActiveScene().name =="Instructions"){
+        this.gameObject.SetActive(false);
+        }
+        else{
+        this.gameObject.SetActive(true);
+        }
+
+        if (SceneManager.GetActiveScene().name == "TitlePage")
+        {
+            this.gameObject.SetActive(false);
+        }
+        else
+        {
+            this.gameObject.SetActive(true);
+        }
+
+        
+        
     }
 
 }
