@@ -2568,7 +2568,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TIMER
   LeveltoLoad: End
-  timer: 10
+  timer: 100
   timerText: {fileID: 788554504}
 --- !u!114 &788554504
 MonoBehaviour:
