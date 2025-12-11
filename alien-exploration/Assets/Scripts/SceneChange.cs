@@ -14,8 +14,18 @@ public class SceneChange : MonoBehaviour
     {
         
     }
-    public void LoadScene(string SceneName)
+    // public void LoadScene(string SceneName)
+    // {
+    //     SceneManager.LoadScene("SceneName");
+    // }
+
+    public void EnterInstructions()
     {
-        SceneManager.LoadScene(SceneName);
+        SceneManager.LoadScene("Instructions");
+    }
+
+    public void StartGame()
+    {
+        SceneManager.LoadScene("SeedOne");
     }
 }
