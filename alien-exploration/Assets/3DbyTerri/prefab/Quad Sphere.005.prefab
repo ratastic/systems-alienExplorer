@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8444319566812451058}
   - component: {fileID: 8822532412268296809}
   - component: {fileID: 3244614287313782759}
+  - component: {fileID: 8130023012945745490}
   m_Layer: 0
   m_Name: Quad Sphere.005
   m_TagString: Untagged
@@ -118,3 +119,26 @@ LODGroup:
     renderers:
     - renderer: {fileID: 8822532412268296809}
   m_Enabled: 1
+--- !u!136 &8130023012945745490
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1992715827071442206}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.20299314
+  m_Height: 0.81023026
+  m_Direction: 1
+  m_Center: {x: -0.024699658, y: 0.21788979, z: -0.015096411}

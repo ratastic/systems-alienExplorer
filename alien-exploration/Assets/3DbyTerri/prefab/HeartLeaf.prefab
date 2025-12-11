@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 978583583241011059}
   - component: {fileID: 304993159153806356}
   - component: {fileID: 2435760577512554663}
+  - component: {fileID: 3224678724698820574}
   m_Layer: 0
   m_Name: HeartLeaf
   m_TagString: Untagged
@@ -122,3 +123,24 @@ LODGroup:
     renderers:
     - renderer: {fileID: 304993159153806356}
   m_Enabled: 1
+--- !u!65 &3224678724698820574
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3852639969006350998}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.6155312, y: 0.41991043, z: 0.63329166}
+  m_Center: {x: -0.041219413, y: 0.9555073, z: -0.13609383}
