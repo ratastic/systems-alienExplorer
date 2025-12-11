@@ -78,6 +78,10 @@ public class CamController : MonoBehaviour
 
         // adds new image to the array
         capturedImages.Add(newImageObj);
+
+        int imageID = ImageRegistry.Instance.RegisterImage(capturedTexture);
+        NotebookManager.Instance.capturedPhotoIDs.Add(imageID);
+        Debug.Log("Saved image with ID: " + imageID);
     }
 
     public void ToggleFrame()

@@ -1066,6 +1066,51 @@ MonoBehaviour:
   minYAngle: 0
   maxYAngle: 30
   viewOffset: 2
+--- !u!1 &397042602
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 397042604}
+  - component: {fileID: 397042603}
+  m_Layer: 0
+  m_Name: IMAGEMANAGER
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &397042603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 397042602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bec6abbd132f743589e32c651b6b2567, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ImageRegistry
+  savedImages: []
+--- !u!4 &397042604
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 397042602}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 187.11049, y: 0.57147, z: 173.74673}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -1994,7 +2039,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TIMER
   LeveltoLoad: End
-  timer: 240
+  timer: 10
   timerText: {fileID: 788554504}
 --- !u!114 &788554504
 MonoBehaviour:
@@ -4358,7 +4403,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 5377633911348310472}
   m_Direction: 2
   m_Value: 1
-  m_Size: 1
+  m_Size: 0.735104
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -5470,7 +5515,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.00030517578, y: -0.00061035156}
+  m_AnchoredPosition: {x: -0.00030517578, y: 0.00024414062}
   m_SizeDelta: {x: 1237.5, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &6118532769388634151
@@ -5510,6 +5555,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NotebookManager
   savedNoteText: 
   noteInput: {fileID: 2692115716157218758}
+  capturedPhotoIDs: 
 --- !u!224 &6235424899335990196
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5954,3 +6000,4 @@ SceneRoots:
   - {fileID: 2121822745}
   - {fileID: 514329632}
   - {fileID: 5450151206406612004}
+  - {fileID: 397042604}

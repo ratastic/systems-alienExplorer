@@ -1,7 +1,8 @@
 using UnityEngine;
-
 using UnityEngine.SceneManagement;
 using TMPro;
+using System.Collections;
+using System.Collections.Generic;
 
 public class NotebookManager : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class NotebookManager : MonoBehaviour
     public string savedNoteText = "";
     public TMP_InputField noteInput;
 
+    public List<int> capturedPhotoIDs = new List<int>();
 
     void Awake()
     {
@@ -35,11 +37,13 @@ public class NotebookManager : MonoBehaviour
             noteInput.readOnly = false;
         }
 
-        if (SceneManager.GetActiveScene().name =="Instructions"){
-        this.gameObject.SetActive(false);
+        if (SceneManager.GetActiveScene().name == "Instructions")
+        {
+            this.gameObject.SetActive(false);
         }
-        else{
-        this.gameObject.SetActive(true);
+        else
+        {
+            this.gameObject.SetActive(true);
         }
 
         if (SceneManager.GetActiveScene().name == "TitlePage")
@@ -50,13 +54,5 @@ public class NotebookManager : MonoBehaviour
         {
             this.gameObject.SetActive(true);
         }
-
-        
-        
     }
-
 }
-/* notebook as a singleton: can access using "NotebookManager.Instance.savedNoteText"
- only needs to exist in the game once, which is in the main scene,
-dont need to add to another scene in notebook manager :)
- */
